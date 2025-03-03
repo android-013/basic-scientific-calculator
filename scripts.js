@@ -470,3 +470,8 @@ function gfg_Run() {
     var text = document.getElementById('history');
     text.scrollTop = text.scrollHeight;
 }
+
+function scroll_right() {
+    var text = document.getElementById("expression1");
+    text.scrollLeft = text.scrollWidth;
+}
