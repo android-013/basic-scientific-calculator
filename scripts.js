@@ -475,3 +475,8 @@ function scroll_right() {
     var text = document.getElementById("expression1");
     text.scrollLeft = text.scrollWidth;
 }
+
+function runtwofunction() {
+    solve();
+    gfg_Run();
+}
