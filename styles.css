@@ -1,0 +1,8 @@
+.design {
+    max-width: 900px;
+    width: 100%;
+    ;
+    border: 1px groove #2184E7;
+    border-radius: 12px;
+    overflow: hidden;
+}
