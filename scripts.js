@@ -111,4 +111,66 @@ function solve() {
         }
     }
 
+    var p = expression2.indexOf('√');
+    if (p > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == '√') {
+                if (expression2[k + 1] == '(') {
+                    var i = k + 2;
+                    while (expression2[i] != ')' && i != expression2.length) {
+                        i = i + 1;
+                    }
+                    if (i == expression2.length && expression2[i] != ')') {
+                        x += ")";
+                    }
+
+                    var n = eval(expression2.substring(k + 2, i));
+                    var ans = Math.pow(n, 0.5);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i + 1, expression2.length);
+
+                }
+                else {
+                    var i = k + 1;
+                    while (expression2[i] == 0 || expression2[i] == 1 || expression2[i] == 2 || expression2[i] == 3 || expression2[i] == 4 || expression2[i] == 5 || expression2[i] == 6 || expression2[i] == 7 || expression2[i] == 8 || expression2[i] == 9 || expression2[i] == ".") {
+                        i = i + 1;
+                    }
+                    var n = eval(expression2.substring(k + 1, i));
+                    var ans = Math.pow(n, 0.5);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i, expression2.length);
+                }
+            }
+        }
+    }
+
+    var q = expression2.indexOf('s');
+    if (q > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == 's') {
+                if (expression2[k + 3] == '(') {
+                    var i = k + 4;
+                    while (expression2[i] != ')' && i != expression2.length) {
+                        i = i + 1;
+                    }
+                    if (i == expression2.length && expression2[i] != ')') {
+                        x += ")";
+                    }
+
+                    var n = eval(expression2.substring(k + 4, i));
+                    var ans = Math.sin((n / 180) * Math.PI);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i + 1, expression2.length);
+
+                }
+                else {
+                    var i = k + 3;
+                    while (expression2[i] == 0 || expression2[i] == 1 || expression2[i] == 2 || expression2[i] == 3 || expression2[i] == 4 || expression2[i] == 5 || expression2[i] == 6 || expression2[i] == 7 || expression2[i] == 8 || expression2[i] == 9 || expression2[i] == ".") {
+                        i = i + 1;
+                    }
+                    var n = eval(expression2.substring(k + 3, i));
+                    var ans = Math.sin((n / 180) * Math.PI);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i, expression2.length);
+                }
+            }
+        }
+    }
+
     
