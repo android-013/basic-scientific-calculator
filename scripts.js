@@ -452,3 +452,9 @@ function back() {
     }
     check = 0;
 }
+
+function clr() {
+    document.getElementById("expression1").value = "";
+    expression2 = "";
+    check = 0;
+}
