@@ -408,3 +408,47 @@ function checkBalancedParentheses(str) {
     if (stack.length !== 0) {return 1};
     return 2;
 }
+
+function back() {
+    var v = document.getElementById("expression1").value;
+    var m = expression2[expression2.length - 2];
+    var n = expression2[expression2.length - 1];
+    var p = v[v.length - 2];
+    var q = v[v.length - 1];
+
+    if (check == 1 || expression2 == "Error" || expression2 == "NaN") {
+        clr();
+    }
+    else if (m == '*' || n == '*') {
+        if (n != '*' && m == '*' && p != '\u00D7' && p != '^') {
+            expression2 = expression2.substring(0, expression2.length - 3);
+            document.getElementById("expression1").value = v.substring(0, v.length - 1);
+        }
+        else if (n != '*' && m == '*' && (p != '\u00D7' || p != '^')) {
+            expression2 = expression2.substring(0, expression2.length - 1);
+            document.getElementById("expression1").value = v.substring(0, v.length - 1);
+        }
+        else if (n == '*' && m == '*' && q == '^') {
+            expression2 = expression2.substring(0, expression2.length - 2);
+            document.getElementById("expression1").value = v.substring(0, v.length - 1);
+        }
+        else if (n == '*' && m == '*' && q == '\u00D7') {
+            expression2 = expression2.substring(0, expression2.length - 1);
+            document.getElementById("expression1").value = v.substring(0, v.length - 1);
+        }
+        else if (n == '*' && m != '*' && q == '\u00D7') {
+            expression2 = expression2.substring(0, expression2.length - 1);
+            document.getElementById("expression1").value = v.substring(0, v.length - 1);
+        }
+    }
+    else if (q == "π" || q == "e") {
+        expression2 = expression2.substring(0, expression2.length - 17);
+        document.getElementById("expression1").value = v.substring(0, v.length - 1);
+    }
+
+    else {
+        expression2 = expression2.substring(0, expression2.length - 1);
+        document.getElementById("expression1").value = v.substring(0, v.length - 1);
+    }
+    check = 0;
+}
