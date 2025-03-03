@@ -173,4 +173,172 @@ function solve() {
         }
     }
 
+    var r = expression2.indexOf('c');
+    if (r > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == 'c') {
+                if (expression2[k + 3] == '(') {
+                    var i = k + 4;
+                    while (expression2[i] != ')' && i != expression2.length) {
+                        i = i + 1;
+                    }
+                    if (i == expression2.length && expression2[i] != ')') {
+                        x += ")";
+                    }
+                    var n = eval(expression2.substring(k + 4, i));
+                    var ans = Math.cos((n / 180) * Math.PI);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i + 1, expression2.length);
+
+                }
+                else {
+                    var i = k + 3;
+                    while (expression2[i] == 0 || expression2[i] == 1 || expression2[i] == 2 || expression2[i] == 3 || expression2[i] == 4 || expression2[i] == 5 || expression2[i] == 6 || expression2[i] == 7 || expression2[i] == 8 || expression2[i] == 9 || expression2[i] == ".") {
+                        i = i + 1;
+                    }
+                    var n = eval(expression2.substring(k + 3, i));
+                    var ans = Math.cos((n / 180) * Math.PI);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i, expression2.length);
+                }
+            }
+        }
+    }
+
+    var s = expression2.indexOf('t');
+    if (s > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == 't') {
+                if (expression2[k + 3] == '(') {
+                    var i = k + 4;
+                    while (expression2[i] != ')' && i != expression2.length) {
+                        i = i + 1;
+                    }
+
+                    if (i == expression2.length && expression2[i] != ')') {
+                        x += ")";
+                    }
+
+                    var n = eval(expression2.substring(k + 4, i));
+                    if (n % 90 == 0 && n % 180 != 0) {
+                        expression2 = Infinity;
+                        document.getElementById("expression1").value = Infinity;
+                        var history = document.getElementById("history");
+                        history.value += "\n" + x + " = " + expression2;
+                        gfg_Run();
+                    }
+                    else {
+                        var ans = Math.tan((n / 180) * Math.PI);
+                        expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i + 1, expression2.length);
+                    }
+
+                }
+                else {
+                    var i = k + 3;
+                    while (expression2[i] == 0 || expression2[i] == 1 || expression2[i] == 2 || expression2[i] == 3 || expression2[i] == 4 || expression2[i] == 5 || expression2[i] == 6 || expression2[i] == 7 || expression2[i] == 8 || expression2[i] == 9 || expression2[i] == ".") {
+                        i = i + 1;
+                    }
+                    var n = eval(expression2.substring(k + 3, i));
+                    if (n % 90 == 0 && n % 180 != 0) {
+                        expression2 = Infinity;
+                        document.getElementById("expression1").value = Infinity;
+                        var history = document.getElementById("history");
+                        history.value += "\n" + x + " = " + expression2;
+                        gfg_Run();
+                    }
+                    else {
+                        var ans = Math.tan((n / 180) * Math.PI);
+                        expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i, expression2.length);
+                    }
+                }
+            }
+        }
+    }
+    var t = expression2.indexOf('l');
+    if (t > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == 'l') {
+                if (expression2[k + 3] == '(') {
+                    var h = k + 4;
+                    while (expression2[h] != ')' && h != expression2.length) {
+                        h = h + 1;
+                    }
+                    if (h == expression2.length && expression2[h] != ')') {
+                        x += ")";
+                    }
+
+                    var n = eval(expression2.substring(k + 4, h));
+                    var ans = Math.log10(n);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(h + 1, expression2.length);
+
+                }
+                else {
+                    var h = k + 3;
+                    while (expression2[h] == 0 || expression2[h] == 1 || expression2[h] == 2 || expression2[h] == 3 || expression2[h] == 4 || expression2[h] == 5 || expression2[h] == 6 || expression2[h] == 7 || expression2[h] == 8 || expression2[h] == 9 || expression2[h] == ".") {
+                        h = h + 1;
+                    }
+                    var n = eval(expression2.substring(k + 3, h));
+                    var ans = Math.log10(n);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(h, expression2.length);
+                }
+            }
+        }
+    }
+
+    var u = expression2.indexOf('j');
+    if (u > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == 'j') {
+                if (expression2[k + 2] == '(') {
+                    var i = k + 3;
+                    while (expression2[i] != ')' && i != expression2.length) {
+                        i = i + 1;
+                    }
+                    if (i == expression2.length && expression2[i] != ')') {
+                        x += ")";
+                    }
+
+                    var n = eval(expression2.substring(k + 3, i));
+                    var ans = Math.log(n);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i + 1, expression2.length);
+
+                }
+                else {
+                    var i = k + 2;
+                    while (expression2[i] == 0 || expression2[i] == 1 || expression2[i] == 2 || expression2[i] == 3 || expression2[i] == 4 || expression2[i] == 5 || expression2[i] == 6 || expression2[i] == 7 || expression2[i] == 8 || expression2[i] == 9 || expression2[i] == ".") {
+                        i = i + 1;
+                    }
+                    var n = eval(expression2.substring(k + 2, i));
+                    var ans = Math.log(n);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i, expression2.length);
+                }
+            }
+        }
+    }
+    var v = expression2.indexOf('a');
+    if (v > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == 'a') {
+                if (expression2[k + 3] == '(') {
+                    var i = k + 4;
+                    while (expression2[i] != ')' && i != expression2.length) {
+                        i = i + 1;
+                    }
+                    if (i == expression2.length && expression2[i] != ')') {
+                        x += ")";
+                    }
+
+                    var n = eval(expression2.substring(k + 4, i));
+                    var ans = Math.abs(n);
+                    expression2 = expression2.substring(0, k) + String(ans) + expression2.substring(i + 1, expression2.length);
+
+                }
+                else {
+                    document.getElementById("expression1").value = "Error";
+                    expression2 = "Error";
+                    var history = document.getElementById("history");
+                    history.value += "\n" + x + " = " + expression2 + "\n" + "Please add parenthesis after abs";
+                    gfg_Run();
+                }
+            }
+        }
+    }
     
