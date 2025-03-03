@@ -31,3 +31,19 @@ function display2(val) {
     m.value += val;
     scroll_right();
 }
+
+function display3(val) {
+    if (check == 1) {
+        if (val == '0' || val == '1' || val == '2' || val == '3' || val == '4' || val == '5' || val == '6' || val == '7' || val == '8' || val == '9' || val == "(" || val == ")" || val == "sss(" || val == "ccc(" || val == "ttt(" || val == "lll(" || val == "jj(" || val == Math.PI || val == Math.E || val == "√(" || val == "aaa(") {
+            clr();
+        }
+        else if (expression2 == "Error" || expression2 == "NaN") {
+            clr();
+        }
+        else {
+            check = 0;
+        }
+    }
+    expression2 += val;
+    scroll_right();
+}
