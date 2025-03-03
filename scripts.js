@@ -458,3 +458,10 @@ function clr() {
     expression2 = "";
     check = 0;
 }
+
+function allclr() {
+    document.getElementById("history").value = "";
+    document.getElementById("expression1").value = "";
+    expression2 = "";
+    check = 0;
+}
