@@ -47,3 +47,68 @@ function display3(val) {
     expression2 += val;
     scroll_right();
 }
+
+function solve() {
+    check = 1;
+    var x = document.getElementById("expression1").value;
+    var o = expression2.indexOf('!');
+    if (o > -1) {
+        for (var k = 0; k < expression2.length; k++) {
+            if (expression2[k] == '!') {
+                if (expression2[k - 1] == ')') {
+                    var i = k - 1;
+                    while (expression2[i] != '(') {
+                        i = i - 1;
+                    }
+                    if (expression2[i] == ".") {
+                        var history = document.getElementById("history");
+                        history.value += "\n" + x + " = " + 'Error' + "\n" + "Factorial function is defined for non-negative integers.";
+                        document.getElementById("expression1").value = "Error";
+                        expression2 = "Error";
+                        gfg_Run();
+                    }
+                    var n = eval(expression2.substring(i, k));
+                    var ans = 1;
+                    for (var j = 1; j <= n; j++) {
+                        ans = ans * j;
+                    }
+                    expression2 = expression2.substring(0, i) + String(ans) + expression2.substring(k + 1, expression2.length);
+                    if ((ans == 1 && n != 0 && n != 1)) {
+                        var history = document.getElementById("history");
+                        history.value += "\n" + x + " = " + 'Error' + "\n" + "Factorial function is defined for non-negative integers.";
+                        document.getElementById("expression1").value = "Error";
+                        expression2 = "Error";
+                        gfg_Run();
+                    }
+                }
+                else {
+                    var i = k - 1;
+                    while (expression2[i] == 0 || expression2[i] == 1 || expression2[i] == 2 || expression2[i] == 3 || expression2[i] == 4 || expression2[i] == 5 || expression2[i] == 6 || expression2[i] == 7 || expression2[i] == 8 || expression2[i] == 9) {
+                        i = i - 1;
+                    }
+                    if (expression2[i] == ".") {
+                        var history = document.getElementById("history");
+                        history.value += "\n" + x + " = " + 'Error' + "\n" + "Factorial function is defined for non-negative integers.";
+                        document.getElementById("expression1").value = "Error";
+                        expression2 = "Error";
+                        gfg_Run();
+                    }
+                    var n = eval(expression2.substring(i + 1, k));
+                    var ans = 1;
+                    for (var j = 1; j <= n; j++) {
+                        ans = ans * j;
+                    }
+                    expression2 = expression2.substring(0, i + 1) + String(ans) + expression2.substring(k + 1, expression2.length);
+                    if ((ans == 1 && n != 0 && n != 1)) {
+                        var history = document.getElementById("history");
+                        history.value += "\n" + x + " = " + 'Error' + "\n" + "Factorial function is defined for non-negative integers.";
+                        document.getElementById("expression1").value = "Error";
+                        expression2 = "Error";
+                        gfg_Run();
+                    }
+                }
+            }
+        }
+    }
+
+    
