@@ -342,3 +342,46 @@ function solve() {
         }
     }
     
+    if (expression2 != Infinity) {
+        try {
+            var y = eval(expression2);
+        } catch (err) {
+            let temp = checkBalancedParentheses(expression2);
+            if(temp===0){
+                expression2 = "Error";
+                var history = document.getElementById("history");
+                history.value += "\n" + x + " = " + expression2 + "\n" + "Error: closing bracket has been used before an opening bracket.";
+                document.getElementById("expression1").value = "Error";
+                gfg_Run();
+            }
+            else if(temp===1){
+                expression2 = "Error";
+                var history = document.getElementById("history");
+                history.value += "\n" + x + " = " + expression2 + "\n" + "Error: brackets are not balanced.";
+                document.getElementById("expression1").value = "Error";
+                gfg_Run();
+            }
+            else{
+                document.getElementById("expression1").value = "Error";
+                expression2 = "Error";
+                var history = document.getElementById("history");
+                history.value += "\n" + x + " = " + expression2;
+                gfg_Run();
+            }
+        }
+
+        var z = y.toFixed(10);
+        var w = parseFloat(z);
+        temp = w;
+        expression2 = String(w);
+        document.getElementById("expression1").value = expression2;
+
+        if (expression2 != "Error") {
+            var history = document.getElementById("history");
+            history.value += "\n" + x + " = " + expression2;
+            gfg_Run();
+        }
+    }
+}
+var temp = '';
+var check = 0;
