@@ -465,3 +465,8 @@ function allclr() {
     expression2 = "";
     check = 0;
 }
+
+function gfg_Run() {
+    var text = document.getElementById('history');
+    text.scrollTop = text.scrollHeight;
+}
