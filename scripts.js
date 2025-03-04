@@ -536,3 +536,9 @@ function squareroot() {
     display3('√(');
     check = 0;
 }
+
+function factorial() {
+    display2('!');
+    display3('!');
+    check = 0;
+}
