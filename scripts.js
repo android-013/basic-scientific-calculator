@@ -519,3 +519,9 @@ function multiply() {
     display3('*');
     check = 0;
 }
+
+function square() {
+    display2('\u00B2');
+    display3('**2');
+    check = 0;
+}
