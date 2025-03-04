@@ -513,3 +513,9 @@ function power() {
     display3('**');
     check = 0;
 }
+
+function multiply() {
+    display2('\u00D7');
+    display3('*');
+    check = 0;
+}
