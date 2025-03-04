@@ -507,3 +507,9 @@ function e() {
     display3(Math.E);
     check = 0;
 }
+
+function power() {
+    display2('^');
+    display3('**');
+    check = 0;
+}
