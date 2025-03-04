@@ -565,3 +565,20 @@ function sinfn() {
         gfg_Run();
     }
 }
+
+function cosfn() {
+    var x = document.getElementById("expression1").value;
+    var n = x.length - 1;
+    if (check == 0 && ((x[n] == ")" || x[n] == "!" || x[n] == "π" || x[n] == "e" || x[n] == "\u00B2" || x[n] == "%" || x[n] == 0 || x[n] == 1 || x[n] == 2 || x[n] == 3 || x[n] == 4 || x[n] == 5 || x[n] == 6 || x[n] == 7 || x[n] == 8 || x[n] == 9))) {
+        multiply();
+    }
+    display2('cos(');
+    display3('ccc(');////intentionally written ccc so to avoid letter s which is present in sin as well.
+    check = 0;
+    var h = document.getElementById("history");
+    var m = h.value.indexOf('Enter');
+    if (m < 0) {
+        h.value += "\n" + "Enter angle in degree.";
+        gfg_Run();
+    }
+}
