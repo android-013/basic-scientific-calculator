@@ -480,3 +480,8 @@ function runtwofunction() {
     solve();
     gfg_Run();
 }
+
+function answer() {
+    document.getElementById("expression1").value += temp;
+    expression2 += temp;
+}
