@@ -542,3 +542,9 @@ function factorial() {
     display3('!');
     check = 0;
 }
+
+function percentage() {
+    display2('%');
+    display3('/100');
+    check = 0;
+}
