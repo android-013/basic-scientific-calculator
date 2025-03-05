@@ -638,3 +638,31 @@ function exp() {
     display3('*10**');
     check = 0;
 }
+
+document.addEventListener('keydown',keyPressed);
+
+function keyPressed(e){
+    //Conditional Statments
+    if(e.key=="1"){
+        display1(1);
+    }else if(e.key=="2"){
+        display1(2);
+    }else if(e.key=="3"){
+        display1(3);
+    }else if(e.key=="4"){
+        display1(4);
+    }else if(e.key=="5"){
+        display1(5);
+    }else if(e.key=="6"){
+        display1(6);
+    }else if(e.key=="7"){
+        display1(7);
+    }else if(e.key=="8"){
+        display1(8);
+    }else if(e.key=="9"){
+        display1(9);
+    }else if(e.key=="0"){
+        display1(0);
+    }
+
+}
