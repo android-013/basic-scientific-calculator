@@ -10,3 +10,9 @@
 .full-width {
     width: 100%;
 }
+
+a {
+    color: #888;
+    margin: 10px;
+    cursor: pointer;
+}
