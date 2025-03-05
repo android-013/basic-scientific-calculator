@@ -632,3 +632,9 @@ function abs() {
     display3('aaa(');
     check = 0;
 }
+
+function exp() {
+    display2('\u00D710^');
+    display3('*10**');
+    check = 0;
+}
