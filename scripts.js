@@ -599,3 +599,14 @@ function tanfn() {
         gfg_Run();
     }
 }
+
+function logfn() {
+    var x = document.getElementById("expression1").value;
+    var n = x.length - 1;
+    if (check == 0 && ((x[n] == ")" || x[n] == "!" || x[n] == "π" || x[n] == "e" || x[n] == "\u00B2" || x[n] == "%" || x[n] == 0 || x[n] == 1 || x[n] == 2 || x[n] == 3 || x[n] == 4 || x[n] == 5 || x[n] == 6 || x[n] == 7 || x[n] == 8 || x[n] == 9))) {
+        multiply();
+    }
+    display2('log(');
+    display3('lll(');
+    check = 0;
+}
