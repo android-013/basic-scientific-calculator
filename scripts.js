@@ -687,4 +687,20 @@ function keyPressed(e){
         back();
     }
 
+    else if(e.key=="s" || e.key=="S"){
+        sinfn();
+    }else if(e.key=="c" || e.key=="C"){
+        cosfn();
+    }else if(e.key=="t" || e.key=="T"){
+        tanfn();
+    }else if(e.key=="p"){
+        pi();
+    }else if(e.key=="!"){
+        factorial();
+    }else if(e.key=="^"){
+        power();
+    }else if(e.key=="%"){
+        percentage();
+    }
+
 }
