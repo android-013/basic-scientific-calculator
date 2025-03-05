@@ -673,4 +673,18 @@ function keyPressed(e){
         display1(')');
     }
 
+    else if(e.key=="/"){
+        display1('/');
+    }else if(e.key=="*"){
+        multiply();
+    }else if(e.key=="+"){
+        display1('+');
+    }else if(e.key=="-"){
+        display1('-');
+    }else if(e.key=="=" || e.key=="Enter"){
+        runtwofunction();
+    }else if(e.key=="Delete" || e.key=="Backspace"){
+        back();
+    }
+
 }
