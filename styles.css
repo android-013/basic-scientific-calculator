@@ -16,3 +16,7 @@ a {
     margin: 10px;
     cursor: pointer;
 }
+
+.mt-100 {
+    margin-top: 100px;
+}
