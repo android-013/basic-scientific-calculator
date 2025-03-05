@@ -665,4 +665,12 @@ function keyPressed(e){
         display1(0);
     }
 
+    else if(e.key=="."){
+        display1('.');
+    }else if(e.key=="("){
+        display1('(');
+    }else if(e.key==")"){
+        display1(')');
+    }
+
 }
