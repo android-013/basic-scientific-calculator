@@ -58,3 +58,7 @@ a {
     margin: 0px;
     padding: 0px;
 }
+
+.design .row div {
+    padding: 0px;
+}
