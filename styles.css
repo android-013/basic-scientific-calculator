@@ -53,3 +53,8 @@ a {
     background: #FFF;
     padding: 15px !important;
 }
+
+.design .row {
+    margin: 0px;
+    padding: 0px;
+}
