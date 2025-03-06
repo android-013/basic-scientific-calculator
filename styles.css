@@ -44,3 +44,7 @@ a {
 .mb-55 {
     margin-bottom: 55px;
 }
+
+.p-10 {
+    padding: 10px !important;
+}
