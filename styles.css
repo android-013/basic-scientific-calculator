@@ -74,3 +74,11 @@ a {
 .text-right {
     text-align: right;
 }
+
+.orblock span {
+    background: #999;
+    vertical-align: middle;
+    width: 40%;
+    height: 2px;
+    display: inline-block;
+}
