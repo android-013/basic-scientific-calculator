@@ -62,3 +62,7 @@ a {
 .design .row div {
     padding: 0px;
 }
+
+.text-center {
+    text-align: center;
+}
