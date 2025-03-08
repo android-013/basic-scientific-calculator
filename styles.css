@@ -122,3 +122,11 @@ textarea {
     text-decoration: none !important;
     color: black !important;
 }
+
+.newblue{
+    background-color: #0A66C2;
+}
+
+.newblue:hover{
+    background-color: #004182;
+}
