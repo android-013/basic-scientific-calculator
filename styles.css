@@ -112,3 +112,8 @@ textarea {
         display: block;
     }
 }
+
+.hrefWithoutDecoration {
+    text-decoration: none !important;
+    color: white !important;
+}
