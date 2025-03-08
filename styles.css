@@ -90,3 +90,8 @@ input[type="text"] {
     border: none;
     outline: none;
 }
+
+textarea {
+    height: 120px;
+    resize: none;
+}
