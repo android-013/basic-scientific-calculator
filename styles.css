@@ -91,6 +91,10 @@ input[type="text"] {
     outline: none;
 }
 
+.btn-color {
+    background: #dfe1e5 !important;
+}
+
 textarea {
     height: 120px;
     resize: none;
