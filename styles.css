@@ -95,6 +95,11 @@ input[type="text"] {
     background: #dfe1e5 !important;
 }
 
+.btn-color-blue {
+    background: #2184E7 !important;
+    color: white !important;
+}
+
 textarea {
     height: 120px;
     resize: none;
