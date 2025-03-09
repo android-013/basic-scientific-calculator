@@ -104,6 +104,10 @@ input[type="text"] {
     background: #e8eaeb !important;
 }
 
+.onhoverdark:hover {
+    background: #d7d9dd !important;
+}
+
 textarea {
     height: 120px;
     resize: none;
