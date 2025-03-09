@@ -103,6 +103,7 @@ input[type="text"] {
 .onhoverlight:hover {
     background: #e8eaeb !important;
 }
+
 .onhoverdark:hover {
     background: #d7d9dd !important;
 }
