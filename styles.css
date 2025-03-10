@@ -116,6 +116,10 @@ input[type="text"] {
     background: #4d8bf1 !important;
 }
 
+.icon-color {
+    color: black !important;
+}
+
 textarea {
     height: 120px;
     resize: none;
