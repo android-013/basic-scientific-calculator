@@ -136,6 +136,10 @@ input[type="text"] {
     font-weight: bold
 }
 
+.dDoNo {
+    font-size: xx-large !important
+}
+
 textarea {
     height: 120px;
     resize: none;
