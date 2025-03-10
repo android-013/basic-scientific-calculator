@@ -108,6 +108,14 @@ input[type="text"] {
     background: #d7d9dd !important;
 }
 
+.onhoverblue:hover {
+    background: #2184E7 !important;
+}
+
+.onhoverlightblue:hover {
+    background: #4d8bf1 !important;
+}
+
 textarea {
     height: 120px;
     resize: none;
