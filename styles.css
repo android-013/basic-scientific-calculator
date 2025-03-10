@@ -140,6 +140,10 @@ input[type="text"] {
     font-size: xx-large !important
 }
 
+.adiow {
+    font-size: 20px;
+}
+
 textarea {
     height: 120px;
     resize: none;
