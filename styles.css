@@ -11,6 +11,12 @@ body {
     overflow: hidden;
 }
 
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
 .design {
     max-width: 900px;
     width: 100%;
