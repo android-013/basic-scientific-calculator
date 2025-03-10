@@ -128,6 +128,10 @@ input[type="text"] {
     font-size: 14px;
 }
 
+.mF5fo {
+    font-size: 18px;
+}
+
 textarea {
     height: 120px;
     resize: none;
