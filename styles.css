@@ -120,6 +120,10 @@ input[type="text"] {
     color: black !important;
 }
 
+.UpZIS- {
+    font-size: 13px;
+}
+
 textarea {
     height: 120px;
     resize: none;
